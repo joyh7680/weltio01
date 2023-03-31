@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weltio</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="wrraper">
+        <!-- s: header  -->
+        <header>
+            <div class="inner">
+                <div class="gnb_area">
+                    <div class="gnb_menu left">
+                        <!-- js 로고에 마우스 갖다대면 점이 움직임  -->
+                        <!-- logo 를 css background 로 넣어야 하는지 ?  -->
+                        <h1 class="logo"><a href="javascript:void(0);"><span class="blind">weltio</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 27" style="fill: rgb(11, 30, 91);"> <path d="M15.75 17.2a30.8 30.8 0 0 1 .84 3.67h.09a31.48 31.48 0 0 1 .75-3.7l2.32-8.78h3.63l-5 17.53H15l-2.47-8.78a22.14 22.14 0 0 1-.81-3.57h-.13a24.74 24.74 0 0 1-.78 3.57l-2.5 8.78H5L0 8.38h3.66L6 17.2a25.68 25.68 0 0 1 .75 3.7h.13a21.24 21.24 0 0 1 .84-3.67l2.5-8.85h3Z"></path> <path d="M39.53 18H28c.28 3.33 2.08 4.89 4.49 4.89a4.66 4.66 0 0 0 4.25-2.27l2.38 2.17a7.7 7.7 0 0 1-6.66 3.36c-4.65 0-7.93-3.63-7.93-9.06s3.2-9 7.65-9 7.37 3.6 7.37 8.93v1ZM28.1 15.27H36c-.4-2.85-1.89-4.14-3.87-4.14-2.13 0-3.6 1.43-4.03 4.14Z"></path> <path d="M46.7 25.73c-2.88 0-4.39-1.93-4.39-4.92V.27h3.44v20.3c0 1.22.46 1.9 1.55 1.9h1.2v3.26Z"></path> <path d="M65.21 8.38h-3.44v17.35h3.44Z"></path> <path d="M68.37 17c0-5.33 3.44-9 8.09-9s8.09 3.7 8.09 9-3.44 9.07-8.09 9.07-8.09-3.67-8.09-9.07ZM81 17c0-3.56-2-5.63-4.58-5.63s-4.51 2.1-4.51 5.63 1.92 5.7 4.55 5.7S81 20.64 81 17Z"></path> <path d="M58.73 11.47V8.38h-3.6v-5.7h-3.44v5.7h-2.94v3.09h2.94v8.62c0 3.4 1.73 5.64 5 5.64h2v-3.26h-1.64c-1.33 0-1.92-.92-1.92-2.61v-8.39Z"></path> 
+                                <!-- 점 action -->
+                                <path d="M86.11 24.26a1.95 1.95 0 1 1 3.9 0 1.95 1.95 0 1 1-3.9 0Z" style="transform-origin: 0px 0px;" data-svg-origin="88.06000137329102 26.21000099182129" transform="matrix(1,0,0,1,0,0.43812)"></path> 
+                            </svg>
+                        </a></h1>
+                        <div class="tabs">
+                            <a href="about/index.html" class="tab">About</a>
+                            <a href="javascript:void(0);" class="tab">Contact</a>
+                        </div>
+                        <div class="lang">
+                            <div class="lang_tab">
+                                <a class="lang_icon" href="javascript:void(0);" ><img src="images/icon/globe_navy.svg" alt=""></a>
+                                <a class="lang_tit"href="javascript:void(0);" ><span>En</span>
+                                </a>
+                                <a class="lang_arrow" href="javascript:void(0);" ></a>
+                            </div>
+                            <div class="lang_toggle">
+                                <ul>
+                                    <li><a href="javascript:void(0);">English</a></li>
+                                    <li><a href="javascript:void(0);">Esponal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @ download margin top 안 맞음  -->
+                    <div class="gnb_menu right">
+                        <div class="btn_download">
+                            <button class="btn">
+                                <span class="bg"></span>
+                                <span class="tit">Download </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- e : header  -->
+        
+        <!-- s:main  -->
+        <main>
+            <div class="main_visual">
+                <div class="inner">
+                    <div class="contents_wrap">
+                        <div class="text_wrap">
+                            <h1 class="tit">
+                                More ways <svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M5 27.5V31" stroke="#0B1E5B" stroke-width="2"></path> <path d="M33 27V31" stroke="#0B1E5B" stroke-width="2"></path> <path d="M3 27H35C36.1046 27 37 26.1046 37 25V3C37 1.89543 36.1046 0.999998 35 0.999998H3C1.89543 0.999998 1 1.89543 1 3V25C1 26.1046 1.89543 27 3 27Z" stroke="#0B1E5B" stroke-width="2"></path> <circle cx="20" cy="14" r="5" stroke="#8CAF31" stroke-width="2"></circle> <rect x="2" y="7" width="5" height="2" fill="#8CAF31"></rect> <rect x="2" y="13" width="5" height="2" fill="#8CAF31"></rect> <rect x="2" y="19" width="5" height="2" fill="#8CAF31"></rect> </svg> to grow <br> <svg width="38" height="34" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0 3.98145V28.9814H2V3.98145H0ZM5 33.9814H32V31.9814H5V33.9814ZM0 28.9814C0 31.7429 2.23858 33.9814 5 33.9814V31.9814C3.34315 31.9814 2 30.6383 2 28.9814H0Z" fill="#0B1E5B"></path> <path d="M21.1679 17.2326L20.499 17.9759L21.1679 17.2326ZM22.6506 17.0705L23.4644 17.6518L22.6506 17.0705ZM15.2493 13.4529L14.414 12.903L15.2493 13.4529ZM16.7534 13.2595L16.0845 14.0028L16.7534 13.2595ZM7.83521 26.5314L16.0845 14.0028L14.414 12.903L6.16479 25.4315L7.83521 26.5314ZM16.0845 14.0028L20.499 17.9759L21.8369 16.4893L17.4224 12.5162L16.0845 14.0028ZM23.4644 17.6518L32.8137 4.56268L31.1863 3.40021L21.8369 16.4893L23.4644 17.6518ZM20.499 17.9759C21.3861 18.7743 22.7706 18.623 23.4644 17.6518L21.8369 16.4893L21.8369 16.4893L20.499 17.9759ZM16.0845 14.0028L17.4224 12.5162C16.5126 11.6974 15.0872 11.8806 14.414 12.903L16.0845 14.0028Z" fill="#8CAF31"></path> <path d="M24.1604 4.75872L32.4278 3.16817L34.444 10.9476" stroke="#8CAF31" stroke-width="2"></path> </svg> 
+                                your money
+                            </h1>
+                            <p class="desc">
+                                Want to expand your reach? Get access to American and crypto  markets with a multi-currency account
+                            </p>
+                            <!-- link btn ㅇㅔ ㅁㅏ우스를 올리면 모양 바뀜, 색상바뀜 (남 ->흰) ,마우스포인터 손가락 모양으로 바뀜 -->
+                            <div class="link_wrap">
+                                <a class="link apple" href="javascript:void(0);" >
+                                    <span class="icon icon_apple">
+                                    </span>
+                                    <span class="tit_wrap">
+                                        <span>Get on the <br> </span>
+                                        <span>APP Store</span>
+                                    </span>
+                                </a>
+                                <a class="link google" href="javascript:void(0);" >
+                                    <span class="icon icon_google">
+                                    </span>
+                                    <span class="tit_wrap">
+                                        <span>Get on the <br> </span>
+                                        <span> Google Play</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 반응형일때  비디오가 위로 올라감  -->
+                        <div class="video_wrap">
+                            <div class="cover left">
+                                <video src="videos/main/visual_video_left.mp4" muted autoplay></video>
+                            </div>
+                            <div class="cover right">
+                                <video src="videos/main/visual_video_right.mp4" muted autoplay loop></video>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 마우스를 내리면 이미지가 올라가고 마우스를 올리면 이미지가 내려감  -->
+                    <!-- ㅂㅏㄴ으ㅇ형일때 이미지 사라짐  -->
+                    <div class="image_wrap">
+                        <img src="images/main/money.png" alt="동전">
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <section class="roll_wrap">
+                <div class="inner">
+                    <!-- Swiper -->
+                    <div class="swiper rollSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide roll_item">Deposit </div>
+                            <div class="swiper-slide roll_item">Investment </div>
+                            <div class="swiper-slide roll_item">Earnings </div>
+                            <div class="swiper-slide roll_item">Savings</div>
+                        </div>
+                    </div>   
+                </div>
+            </section>
+
+            <!-- pin-spacer -->
+            <section class="feature_wrap">
+
+                <!-- we-feature -inverse -->
+                <div class="pages_wrap">
+
+                     <!-- Swiper -->
+                    <!-- we-feature-content -ct -->
+                    <div class="swiper pagesSwiper">
+
+                        <!-- we-feature-sections -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="page p01">
+                                    <div class="inner">
+                                        <div class="contents_wrap">
+                                            <div class="cont left">
+                                                <div class="tags_wrap">
+                                                    <div class="tag">
+                                                        <span>Why</span>
+                                                    </div>
+                                                    <div class="tag">
+                                                        <span>Weltio</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <h2 class="tit">Safe and easy access to USD</h2>
+                                                    <p class="desc">The US dollar is one of the most stable currencies on the planet. With Weltio, you can open a fully regulated and fully protected USD account.</p>
+                                                </div>
+                                            </div>
+                                            <div class="cont right">
+                                                <div class="cards_wrap">
+                                                    <div class="card c01">
+                                                        <span class="sub_tit">ahorros</span> 
+                                                        <span class="tit">$27,091.4 USD</span>
+                                                        <div class="tags">
+                                                            <div class="tag left">Depositar</div>
+                                                            <div class="tag right">Invertir
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card c02">
+                                                        <div class="logo_01">
+                                                            <img src="/images/logo/s_logo.png" alt="">
+                                                        </div>
+                                                        <div class="logo_02">
+                                                            <img src="/images/logo/sipc_logo.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="figure_wrap">
+                                                        <video src="/videos/main/pageSwiper_video_01.mp4" muted autoplay loop></video>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Slide 2 -->
+                                <div class="page p02">
+                                    <div class="inner">
+                                        <div class="contents_wrap">
+                                            <div class="cont left">
+                                                <div class="tags_wrap">
+                                                    <div class="tag">
+                                                        <span>Why</span>
+                                                    </div>
+                                                    <div class="tag">
+                                                        <span>Weltio</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <h2 class="tit">No fancy degrees needed</h2>
+                                                    <p class="desc">Investing is for everyone! Whether you're a beginner or a seasoned pro, we welcome investors of all levels</p>
+                                                </div>
+                                            </div>
+                                            <div class="cont right">
+                                                <div class="cards_wrap">
+                                                    <div class="card c03 inverse">
+                                                        <span class="name">Stock</span>
+                                                        <span class="graph">
+                                                            <img src="/images/main/graph_01.png" alt="그래프">
+                                                        </span>
+                                                        <div class="nums">
+                                                            <span>$48.15</span> 
+                                                            <span> +0.4%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card c04 inverse">
+                                                        <span class="sub_tit">stocks portfolio</span> 
+                                                        <span class="tit">$4390.5 USD</span>
+                                                        <div class="info">
+                                                            <span>Hoy +12.0</span>
+                                                            <span>+25%</span>
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag left">
+                                                                <span>Depositar</span>
+                                                            </div>
+                                                            <div class="tag right">
+                                                                <span>Descubre</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="figure_wrap">
+                                                        <video src="/videos/main/pageSwiper_video_02.mp4" muted autoplay loop></video>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Slide 3 -->
+                                <div class="page p03">
+                                    <div class="inner">
+                                        <div class="contents_wrap">
+                                            <div class="cont left">
+                                                <div class="tags_wrap">
+                                                    <div class="tag">
+                                                        <span>Why</span>
+                                                    </div>
+                                                    <div class="tag">
+                                                        <span>Weltio</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <h2 class="tit">Start investing from just MXN $50</h2>
+                                                    <p class="desc">Weltio offers fractional shares, meaning you can buy just part of a share if you're not in a position to pay for a full one</p>
+                                                </div>
+                                            </div>
+                                            <div class="cont right">
+                                                <div class="cards_wrap">
+                                                    <div class="card c05">
+                                                        <ul class="card_list 01">
+                                                            <list class="card_item 01">
+                                                                <span class="sub_tit">etf</span> 
+                                                                <div class="stats">
+                                                                    <span>+1.79</span>
+                                                                    <span>+1.42%</span>
+                                                                </div>
+                                                            </list>
+                                                            <list class="card_item 02">
+                                                                <span class="sub_tit">stock</span> 
+                                                                <div class="stats">
+                                                                    <span>+3.51</span>
+                                                                    <span>+1.35%</span>
+                                                                </div>
+                                                            </list>
+                                                            <list class="card_item 03">
+                                                                <span class="sub_tit">savings</span> 
+                                                                <div class="stats">
+                                                                    <span>+0.24</span>
+                                                                    <span>+0.17%</span>
+                                                                </div>
+                                                            </list>
+                                                            <list class="card_item 04">
+                                                                <span class="sub_tit">crypto</span> 
+                                                                <div class="stats">
+                                                                    <span>+2.88</span>
+                                                                    <span>+0.37%</span>
+                                                                </div>
+                                                            </list>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card c06">
+                                                        <div class="tit_wrap">
+                                                            <span class="name">ETF</span>
+                                                            <div class="stats">
+                                                                <span>$0.078</span>
+                                                                <span>+$0.003</span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="graph">
+                                                            <img src="/images/main/graph_02.png" alt="그래프">
+                                                        </span>
+                                                        <div class="tags">
+                                                            <div class="tag left">
+                                                                <span>Comprar</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="figure_wrap">
+                                                        <video src="/videos/main/pageSwiper_video_03.mp4" muted autoplay loop></video>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="overview_wrap">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>Investing <img src="images/main/ball.png" alt="그래프바">
+                        <br>
+                        <img src="images/main/easy.png" alt="손가락 모양"> made easy
+                        </h2>
+                    </div>
+                    <div class="contents_wrap">
+                        <div class="tag_swrap">
+                            <div class="tag">Invest</div>
+                            <div class="tag">with</div>
+                            <div class="tag">Weltio</div>
+                        </div>
+                        <div class="container_wrap">
+                            <div class="grid">
+                                <!-- cont 01  -->
+                                <div class="cont cont01">
+                                    <div class="image_wrap">
+                                        <img src="images/main/overview_visual.png" alt="핸드폰">
+                                        <div class="particle">
+                                            <img src="images/main/overview_point.svg" alt="반짝임 효과">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- cont 02  -->
+                                <div class="cont cont02 ">
+                                    <p class="desc">
+                                        By joining Weltio, you're joining millions of <br> investors worldwide who trade fractional <br> shares, ETFs and cryptos. Our easy-to-use <br> platform helps you every step of the way
+                                    </p>
+                                
+                                    <div class="link_wrap">
+                                        <a class="link apple inverse" href="javascript:void(0);" >
+                                            <span class="icon icon_apple">
+                                            </span>
+                                            <span class="tit_wrap">
+                                                <span>Get on the <br> </span>
+                                                <span>APP Store</span>
+                                            </span>
+                                        </a>
+                                        <a class="link google inverse" href="javascript:void(0);" >
+                                            <span class="icon icon_google">
+                                            </span>
+                                            <span class="tit_wrap">
+                                                <span>Get on the <br> </span>
+                                                <span> Google Play</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- cont 03 줄이면 slide로 바뀜  -->
+                                <div class="cont cont03 ">
+                                    <div class="swiper overviewSwiper">
+                                        <div class="swiper-wrapper items">
+                                            <div class="swiper-slide item">
+                                                <div class="cover">
+                                                    <div class="image_wrap">
+                                                        <img src="images/main/cont_item_01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>It only takes 5 minutes!</p>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="cover">
+                                                    <div class="image_wrap">
+                                                        <img src="images/main/cont_item_02.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>No minimums and no fees when you trade shares or ETF</p>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="cover">
+                                                    <div class="image_wrap">
+                                                        <img src="images/main/cont_item_03.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>10,000+ financial products to choose from</p>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="cover">
+                                                    <div class="image_wrap">
+                                                        <img src="images/main/cont_item_04.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>Your money within minutes</p>
+                                                <span>From 8am EST to 4pm EST</span>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="cover">
+                                                    <div class="image_wrap">
+                                                        <img src="images/main/cont_item_05.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>A user-friendly interface for all knowledge levels</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-scrollbar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="floating_wrap">
+                <div class="inner">
+                    <div class="text_wrap">
+                        <h2>Crypto, decoded</h2>
+                        <p>With so many cryptocurrencies to choose from, Weltio helps you make sense of it all to build your own crypto portfolio</p>
+                    </div>
+                    <div class="image_wrap">
+                        <div class="cover">
+                            <img src="images/main/coin.jpeg" alt="동전">
+                        </div>
+                        <div class="logos_wrap">
+                            <div class="logo logo_01">
+                                <img src="images/logo/floating_logo_01.png" alt="">
+                            </div>
+                            <div class="logo logo_02">
+                                <img src="images/logo/floating_logo_02.png" alt="">
+                            </div>
+                            <div class="logo logo_03">
+                                <img src="images/logo/floating_logo_03.png" alt="">
+                            </div>
+                            <div class="logo logo_04">
+                                <img src="images/logo/floating_logo_04.png" alt="">
+                            </div>
+                            <div class="logo logo_05">
+                                <img src="images/logo/floating_logo_05.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="suggestion_wrap">
+                <div class="inner">
+                    <div class="contents_wrap">
+                        <!-- 마우스 내리면 처음에만 튕기는 모션  -->
+                        <div class="tags_wrap">
+                            <!-- <div class="tag"><span>Technology</span></div> -->
+                            <div class="tag">Technology</div>
+                            <div class="tag">Crypto</div>
+                            <div class="tag">Ethereum</div>
+                            <div class="tag">Daily Top Movers</div>
+                            <div class="tag">Bitcoin</div>
+                            <div class="tag">Altcoins</div>
+                            <div class="tag">IPO Access</div>
+                            <div class="tag">ETFs</div>
+                        </div>
+                        <!-- 마우스 내리면 처음에만 튕기는 모션  -->
+                        <div class="stat_wrap">
+                            <ul class="list_wrap">
+                                <!-- before list 점 만들어주기  -->
+                                <li class="item_01">ETF</li>
+                                <li class="item_02">Cash</li>
+                                <li class="item_03">Crypto</li>
+                                <li class="item_04">Stocks</li>
+                                <li class="item_05">Savings</li>
+                            </ul>
+                            <div class="graph_wrap">
+                                <div class="graph">
+                                    <!-- bg 로 쓸지 img 로 쓸지 고민  -->
+                                    <img src="/images/icon/suggestion_graph.png" alt="">
+                                </div>
+                                <span class="caption">10%</span>
+                            </div>
+                        </div>
+                        <div class="image_wrap">
+                            <!-- 둥둥 계속 떠있는 모션  -->
+                            <div class="image rocket">
+                                <img src="images/main/rocket.png" alt="로켓">
+                            </div>
+                            <div class="image">
+                                <img src="images/main/window.png" alt="구름">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="tit">You're in the driver's seat</h2>
+                    <p class="desc">What do you want your bank account to look like in 10 years? Weltio clears the path to shares <br> of some of the world's most exciting companies</p>
+                    <div class="link_wrap">
+                        <a class="link apple inverse" href="javascript:void(0);" >
+                            <span class="icon icon_apple">
+                            </span>
+                            <span class="tit_wrap">
+                                <span>Get on the <br></span>
+                                <span>APP Store</span>
+                            </span>
+                        </a>
+                        <a class="link google inverse" href="javascript:void(0);" >
+                            <span class="icon icon_google">
+                            </span>
+                            <span class="tit_wrap">
+                                <span>Get on the <br></span>
+                                <span>Google Play</span>
+                            </span>
+                        </a>
+                    </div> 
+                </div>
+            </section>
+            
+            <section class="question_wrap">
+                <div class="inner">
+                    <!-- 연보라 바탕 box  -->
+                    <div class="bg"></div>
+                        <!-- 반응형되면 사람모션이 위로  -->
+                    <div class="contents_wrap">
+                        <!-- @ motion 어떻게행...? ㅋㅎ...  -->
+                        <div class="cont text_wrap">
+                            <h2>Any questions?</h2>
+                            <p>Answers are just an email away. Drop us a line and the right person will get back to you as soon as possible</p>
+                            <div class="cite_wrap">
+                                <div class="cite join">
+                                    <div class="icon_wrap heart">
+                                        <img src="images/icon/heart.svg" alt="조인">
+                                    </div>
+                                    <div class="tit_wrap">
+                                        <!-- <span class="tit">New account</span> -->
+                                        <div class="tit">New account</div>
+                                        <a class="link" href="javascript:void(0);" >hola@weltio.com</a>
+                                    </div>
+                                </div>
+                                <div class="cite question">
+                                    <div class="icon_wrap question">
+                                        <img src="images/icon/question.svg" alt="물음표">
+                                    </div>
+                                    <div class="tit_wrap">
+                                        <div class="tit">Already a customer</div>
+                                        <a class="link" href="javascript:void(0);" >soporte@weltio.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont figure_wrap">
+                            <div class="figure">
+                                <div class="question">
+                                    <img src="images/common/human/question.png" alt="물음표">
+                                </div>
+                                <div class="face">
+                                    <img src="images/common/human/face.png" alt="얼굴">
+                                </div>
+                                <div class="finger_wrap">
+                                    <div class="finger left">
+                                        <img src="images/common/human/finger_left.png" alt="왼손">
+                                    </div>
+                                    <div class="finger right">
+                                        <img src="images/common/human/finger_right.png" alt="오른손">
+                                    </div>
+                                </div>
+                                <div class="body_top">
+                                    <img src="images/common/human/body_top.png" alt="상체">
+                                </div>
+                                <div class="body_bottom">
+                                    <img src="images/common/human/body_bottom.png" alt="하체">
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- e: main  -->
+
+        <!-- s: footer  -->
+        <footer>
+            <div class="wrap">
+                <div class="inner">
+                    <div class="top_wrap">
+                        <div class="logo_wrap">
+                             <!-- js 로고에 마우스 갖다대면 점이 움직임  -->
+                            <h1 class="logo"><a href="javascript:void(0);"><span class="blind">weltio</span><svg width="167" height="46" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 27" style="fill: rgb(11, 30, 91);"> <path d="M15.75 17.2a30.8 30.8 0 0 1 .84 3.67h.09a31.48 31.48 0 0 1 .75-3.7l2.32-8.78h3.63l-5 17.53H15l-2.47-8.78a22.14 22.14 0 0 1-.81-3.57h-.13a24.74 24.74 0 0 1-.78 3.57l-2.5 8.78H5L0 8.38h3.66L6 17.2a25.68 25.68 0 0 1 .75 3.7h.13a21.24 21.24 0 0 1 .84-3.67l2.5-8.85h3Z"></path> <path d="M39.53 18H28c.28 3.33 2.08 4.89 4.49 4.89a4.66 4.66 0 0 0 4.25-2.27l2.38 2.17a7.7 7.7 0 0 1-6.66 3.36c-4.65 0-7.93-3.63-7.93-9.06s3.2-9 7.65-9 7.37 3.6 7.37 8.93v1ZM28.1 15.27H36c-.4-2.85-1.89-4.14-3.87-4.14-2.13 0-3.6 1.43-4.03 4.14Z"></path> <path d="M46.7 25.73c-2.88 0-4.39-1.93-4.39-4.92V.27h3.44v20.3c0 1.22.46 1.9 1.55 1.9h1.2v3.26Z"></path> <path d="M65.21 8.38h-3.44v17.35h3.44Z"></path> <path d="M68.37 17c0-5.33 3.44-9 8.09-9s8.09 3.7 8.09 9-3.44 9.07-8.09 9.07-8.09-3.67-8.09-9.07ZM81 17c0-3.56-2-5.63-4.58-5.63s-4.51 2.1-4.51 5.63 1.92 5.7 4.55 5.7S81 20.64 81 17Z"></path> <path d="M58.73 11.47V8.38h-3.6v-5.7h-3.44v5.7h-2.94v3.09h2.94v8.62c0 3.4 1.73 5.64 5 5.64h2v-3.26h-1.64c-1.33 0-1.92-.92-1.92-2.61v-8.39Z"></path> 
+                                <!-- 점 action -->
+                                <path d="M86.11 24.26a1.95 1.95 0 1 1 3.9 0 1.95 1.95 0 1 1-3.9 0Z" style="transform-origin: 0px 0px;" data-svg-origin="88.06000137329102 26.21000099182129" transform="matrix(1,0,0,1,0,0.43812)"></path> 
+                            </svg></a></h1>
+    
+                        </div>
+                        <div class="fnb_wrap">
+                            <ul class="menu_list">
+                                <span class="tit">Product</span>
+                                <!-- 호버시에 투명  -->
+                                <li><a href="javascript:void(0);">Invest</a></li>
+                                <li><a href="javascript:void(0);">Crypto</a></li>
+                            </ul>
+                            <ul class="menu_list">
+                                <span class="tit">Resources</span>
+                                <li><a href="javascript:void(0);">Legal</a></li>
+                                <li><a href="javascript:void(0);">Privacy Policy</a></li>
+                                <li><a href="javascript:void(0);">Terms of Use</a></li>
+    
+                            </ul>
+                            <ul class="menu_list">
+                                <span class="tit">About</span>
+                                <li><a href="javascript:void(0);">Who we are</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 호버시에 바탕 inverse  -->
+                    <div class="sns_wrap">
+                        <!-- 마우스 올리면 퍼지는 식으로 남색으로 바뀜 before:bg navy -->
+                        <a class="sns facebook" href="javascript:void(0);" >
+                            <span class="logo logo_facebook"></span>
+                        </a>
+                        <a class="sns instagram" href="javascript:void(0);">
+                            <span class="logo logo_instagram"></span>
+                        </a>
+                        <a class="sns linkedin" href="javascript:void(0);" >
+                            <span class="logo logo_linkedin"></span>
+                        </a>
+                    </div>
+                    <div class="bottom_wrap">
+                        <p>Weltio LLC (“Weltio”) is a Technology Company.</p>
+                        <p>Brokerage and clearing services are provided by Alpaca Securities LLC (“Alpaca”), a FINRA member, a wholly-owned subsidiary of AlpacaDB, Inc. Clearing services are provided by Velox Clearing LLC (Velox) and Vision Financial Markets LLC (Vision). All three are members of the Securities Investor Protection Corporation (SIPC), which protects securities customers of its members up to USD $500,000 (including USD $250,000 for claims for cash) per customer. Explanatory brochure available upon request or at www.sipc.org.</p>
+                        <p>View Alpaca’s disclosures at: https://alpaca.markets/disclosures</p>
+                        <p>Alpaca and Weltio are not affiliated and neither are responsible for the liabilities of the other.</p>
+                        <p>Technology is offered by Weltio.</p>
+                        <p>Weltio is a trading name of Weltio LLC. The information provided by Weltio does not constitute advice or a recommendation to buy, sell, or hold securities. All investments involve risk; the past performance of a security or financial product does not guarantee future results or returns. With any investment in securities or financial products, there is always a risk of losing money. Investors should be aware that system response, execution price, speed, liquidity, market data, and account access times are affected by many factors, including market volatility, size and type of order, market conditions, system performance, and other factors. These risks are to be assumed by the customer.</p>
+                        <p>Trademarks and logos are the property of their respective owners and do not represent endorsements of any kind. Unless otherwise noted, Weltio and its affiliates are not partners, affiliates, or licensees of these companies.</p>
+                        <p>Content, news, research, tools, market data and securities symbols are for educational and illustration purposes only and are not substitutes for professional advice. All information provided is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on this website, our Weltio mobile application or our associated social media pages.</p>
+                        <p>For further details see our Legal Disclosures. By using this website, you accept our Terms of Use and Privacy Policy.</p>
+                        <p>© Copyright 2022, Weltio LLC. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- e: footer  -->
+
+        <!-- s: popUp -->
+        <!-- @  bg랑 박스랑 따로따로 두는게 맞는건지? -->
+        <div class="popUp_download">
+            <div class="popUp_bg"></div>
+            <div class="popUp_box">
+                <div class="btn_close_wrap">
+                    <button class="btn btn_close">
+                        <img src="images/icon/btn_close.svg" alt="닫기 버튼">
+                    </button>
+
+                </div>
+                <div class="popUp_contents_wrap">
+                    <div class="image_wrap">
+                        <img src="images/common/qr.png" alt="QR 코드">
+                    </div>
+                    <p>Scan QR code and start using Weltio right away</p>
+                </div>
+            </div>
+        </div>
+        <!-- e: popUp  -->
+    </div>
+    
+</body>
+</html>

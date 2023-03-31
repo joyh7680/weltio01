@@ -1,0 +1,1087 @@
+@import url("reset.css"); 
+
+.blind { position: absolute; overflow: hidden; width: 1px; height: 1px; margin-right: -1px; clip: rect(0,0,0,0); line-height: 1.6; } 
+
+.hidden { overflow: hidden; } 
+
+body {
+  /* @ 폰트 적용이 안됌  */
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Zilla Slab', serif;
+  font-family: 'Poppins', sans-serif;
+
+  background: #f7f8f2;
+  color: #0B1E5B; 
+  letter-spacing: normal; 
+  line-height: 1.6;
+}
+/* button 태그 : inline  */
+.btn {
+  /* @ relative ?  */
+  position: relative;
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: 0 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+}
+.wrraper {width: 100%; min-width: 320px; min-height: 100vh; position: relative;}
+
+/* heaeder css  */
+header {
+  /* .we-navbar-strip */
+  position: fixed;
+  top: 0;
+  /* padding-top: 20px; */
+  left: 0;
+  /* right: 0; */
+  z-index: 100;
+  /* add  */
+  width: 100%;
+}
+header .inner {
+  /* .we-navbar-container */
+  max-width: 100%;
+  padding: 25px 100px 0;  
+}
+/* add  */
+header > .inner > * {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+}
+header .gnb_area {
+  /* .we-navbar-grid */
+  display: flex;
+  align-items: center;
+  /* @ 얘가 왜 안먹히는건지 ..?  */
+  justify-content: space-between;
+  /* width: 100%;
+  margin: 0 auto; */
+}
+header .gnb_area .gnb_menu {
+  display: inline-block;
+  vertical-align: middle;
+}
+header .gnb_area .logo {
+  /* .we-navbar-logo */
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  width: 90px;
+  height: 26px;
+  vertical-align: middle;
+  margin-right: 50px;
+}
+header .gnb_area .tabs {
+  /* .we-navbar-navs */
+  display: inline-block;
+  margin: 0 -25px;
+  vertical-align: middle;
+}
+header .gnb_area .tabs .tab {
+  display: inline-block;
+  padding: 0 25px;
+  margin: 0;
+  font-size: 16px;
+  vertical-align: bottom;
+  letter-spacing: .02em;
+  font-weight: 400;
+  cursor: pointer;
+}
+header .gnb_area .tabs a:hover {
+  opacity: 0.7;
+}
+header .gnb_area .lang {
+    /* .we-.gnb_areabar-lang */
+  /* @ relative ? */
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  /* @ padding 이 왜 적용이 안되지  */
+  padding: 0 0 0 60px;
+  font-size: 16px;
+  cursor: pointer;
+}
+header .gnb_area .lang .lang_tab {}
+header .gnb_area .lang .lang_tab .lang_icon {
+  /* a 태그는 inline 이므로  */
+  display: inline-block;
+  /* @ 아이콘한테 폰트사이즈 lh 0 ?  */
+    font-size: 21px;
+    line-height: 0;
+}
+header .gnb_area .lang .lang_tab .lang_icon img {
+  /* img 태그는 inline 이므로  */
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  vertical-align: middle;
+}
+header .gnb_area .lang .lang_tab .lang_tit {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+}
+header .gnb_area .lang_tab .lang_arrow::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-image: url(/images/icon/lang_arrow_down.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin: -3px 0 0 5px;
+  transition: transform .2s;
+}
+header .gnb_area .lang_tab .lang_arrow.on::after{
+  background-image: url(/images/icon/lang_arrow_up.svg);
+  transform:  rotate(-360deg);
+}
+header .gnb_area .lang .lang_toggle {
+  position: absolute;
+  display: block;
+  left: 60px;
+  margin: 20px 0 0;
+  min-width: 135px;
+  padding: 30px 25px;
+  z-index: 2;
+  /* transform: translateY(-10px) rotateY('15deg'); */
+  background: #fff;
+  box-shadow: 0 2px 8px gray;
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+header .gnb_area .lang .lang_toggle.on {
+  opacity: 1;
+  visibility: visible;
+}
+header .gnb_area .lang .lang_toggle ul {
+  margin: -15px 0;
+}
+header .gnb_area .lang .lang_toggle ul li {
+}
+header .gnb_area .lang .lang_toggle ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  color: #0b1e5b;
+  white-space: nowrap;
+}
+header .gnb_area .lang .lang_toggle ul li a:hover {
+  opacity: 0.7;
+}
+/* @ 왜 before 가 있어야 하는지? */
+/* header .gnb_area .lang_toggle::before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+} */
+header .gnb_area .btn_download {
+  display: inline-block;
+  vertical-align: middle;
+}
+header .gnb_area .btn_download button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 149px;
+  height: 55px;
+  cursor: pointer;
+}
+header .gnb_area .btn_download button .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/images/icon/btn-download.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+header .gnb_area .btn_download .tit {
+  font-size: 16px;
+  letter-spacing: .02em;
+}
+
+/* main common css  */
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main .inner {
+  padding: 0 100px;
+  max-width: 1400px;
+  margin: 0 auto; 
+}
+
+/* link_wrap css  */
+main .link_wrap {
+  display: flex;
+  margin: 44px 0 0 0;
+  justify-content: space-between;
+  max-width: 380px;
+}
+main .link_wrap .link {
+  height: 62px;
+  min-width: 181px;
+  color: #0b1e5b;
+  background: #eff1e5;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main .link_wrap .link.inverse {
+ color: #f7f8f2;
+ background: #0b1e5b;
+}
+
+main .link_wrap .link.apple {
+  margin: 0;
+}
+main .link_wrap .link.google {
+  margin: 0 0 0 15px;
+}
+main .link_wrap .link:hover {
+  background:#0b1e5b;
+  color:#eff1e5;
+  transition: 0.3s;
+}
+main .link_wrap .link.inverse:hover {
+  color: #0b1e5b;
+  background: #eff1e5;
+ }
+
+main .link_wrap .link .icon {
+  /* @ 왜 relative가 되어야하는건지... */
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  vertical-align: middle;
+}
+main .link_wrap .link .icon_apple::after {
+  content: "";
+  width: 22px;
+  height: 27px;
+  display: inline-block;
+  background-image: url('/images/icon/apple_navy.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+main .link_wrap .link.inverse .icon_apple::after {
+  background-image: url('/images/icon/apple_ivory.svg');
+}
+main .link_wrap .link .icon_apple.on::after {
+  background-image: url('/images/icon/apple_ivory.svg');
+}
+main .link_wrap .link.inverse .icon_apple.on::after {
+  background-image: url('/images/icon/apple_navy.svg');
+}
+main .link_wrap .link .tit_wrap {
+  margin: -2px 0 0 15px;
+  font-size: 17px;
+  letter-spacing: .02em;
+  line-height: 100%;
+  text-align: left;
+  display: inline-block;
+}
+main .link_wrap .link .tit_wrap span:first-child {
+  font-size: 14.4px;
+  font-weight: 400;
+  opacity: .5;
+}
+main .link_wrap .link .icon_google::after {
+  content: "";
+  width: 22px;
+  height: 24px;
+  display: inline-block;
+  background-image: url('/images/icon/google_navy.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+main .link_wrap .link.inverse .icon_google::after {
+  background-image: url('/images/icon/google_ivory.svg');
+}
+main .link_wrap .link .icon_google.on::after{
+  background-image: url('/images/icon/google_ivory.svg');
+}
+main .link_wrap .link.inverse .icon_google.on::after {
+  background-image: url('/images/icon/google_navy.svg');
+}
+
+/* .feature_wrap ?  */
+main .feature_wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 1400px;
+}
+main .feature_wrap .pages_wrap {
+  margin: 0px;
+  max-width: 1400px;
+  width: 1400px;
+  max-height: 596px;
+  height: 596px;
+  padding: 0px;
+}
+main .feature_wrap .pages_wrap .pagesSwiper {
+  height: 100%;
+  position: relative;
+}
+main .feature_wrap .pages_wrap .page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+main .feature_wrap .pages_wrap .p01 {
+  top: 0;
+  z-index: 1;
+}
+main .feature_wrap .pages_wrap .p02 {
+  top: 20px;
+  z-index: 2;
+}
+main .feature_wrap .pages_wrap .p03 {
+  top: 40px;
+  z-index: 3;
+}
+main .feature_wrap .pages_wrap .p04 {
+  top: 60px;
+  z-index: 4;
+}
+main .feature_wrap .pages_wrap .p05 {
+top: 80px;
+z-index: 5;
+}
+main .feature_wrap .pages_wrap .p06 {
+top: 100px;
+z-index: 6;
+}
+
+
+
+main .feature_wrap .pages_wrap .page .inner {
+  /* .we-feature-container */
+  height: 100%;
+  position: relative;
+}
+main .feature_wrap .pages_wrap .page .inner::after {
+  content: "";
+  position: absolute;
+  /* top: 45px;
+  bottom: 45px; */
+  top: 0;
+  bottom: 0;
+  /* left: 20px;
+  right: 20px; */
+  left: 0;
+  right: 0;
+  margin: 0;
+  border-radius: 56px;
+  z-index: -1;
+}
+
+
+ .feature_wrap .pages_wrap .page .inner .contents_wrap {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+main .feature_wrap .pages_wrap .page .inner .contents_wrap .cont {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+main .feature_wrap .pages_wrap .page .inner .contents_wrap .cont.left {
+  padding-left: 40px;
+}
+main .feature_wrap .pages_wrap .page .contents_wrap .cont.left .tags_wrap {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  /* transform: translateX(0); */
+  display: flex;
+}
+main .feature_wrap .pages_wrap .page .contents_wrap .cont .tags_wrap .tag {
+  display: inline-block;
+  padding: 8px 19px;
+  font-size: 15px;
+  font-weight: 350;
+  letter-spacing: -.01em;
+  color: #9597f8;
+  background: #f7f8f2;
+  border-radius: 30px;
+  /* opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  will-change: auto; */
+}
+main .feature_wrap .pages_wrap .page .contents_wrap .cont .text {
+  margin: 0;
+}
+main .feature_wrap .pages_wrap .page .contents_wrap .cont .text .tit {
+  margin: 0 0 20px 0;
+  font-weight: 400;
+  font-family: 'Zilla Slab', serif;
+}
+
+main .feature_wrap .pages_wrap .page .inner .contents_wrap .cont.right {
+  display: flex;
+  /* @ 이게 왜 안먹히지  */
+  align-content: center;
+}
+/* card wap 01  */
+main .feature_wrap .pages_wrap .page .inner .contents_wrap .cont .cards_wrap {
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+  /* 가로 가운데 정렬  */
+  margin: 0 auto ;
+}
+
+/* main .feature_wrap .pages_wrap .page .contents_wrap .cont .cards_wrap .video_wrap {
+  height: 100%;
+  overflow: hidden;
+} */
+
+
+
+
+
+
+
+
+
+
+/* pagesSwiper */
+.pagesSwiper {
+  width: 100%;
+  height: 100%;
+}
+.pagesSwiper .swiper-slide {
+  font-size: 18px;
+  /* background: #fff; */
+  display: flex;
+}
+.pagesSwiper .swiper-slide img {
+  display: block;
+}
+.pagesSwiper .swiper-pagination {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 40;
+}
+.pagesSwiper .swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  border-radius: 50%;
+  /* transition: background .3s,color .3s; */
+  background: none;
+  opacity: 1;
+  margin: var(--swiper-pagination-bullet-vertical-gap,6px) 0;
+}
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 0 10px 0;
+  display: flex;
+}
+
+
+
+
+
+/* suggestion_wrap */
+main .suggestion_wrap, main .question_wrap {
+  padding: 80px 0;
+}
+.suggestion_wrap {
+  text-align: center;
+}
+.suggestion_wrap .contents_wrap {
+  position: relative;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.suggestion_wrap .contents_wrap .tags_wrap {
+  width: 300px;
+  height: 190px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  /* v  */
+  position: absolute;
+  top: 0;
+  text-align: left;
+}
+.suggestion_wrap .contents_wrap .tags_wrap .tag {
+  font-size: 16px;
+  background: #f7f8f2;
+  margin: 0 10px 10px 0;
+  padding: 9px 16px 11px 16px;
+  box-shadow: 0 3px 8px rgb(53 49 72 / 8%);
+  /* width: 120px;
+  height: 38px; */
+  border-radius: 20px;
+  font-weight: 650;
+  /* width: auto; */
+  /* 나란히 해되니까  */
+  display: inline-block;
+}
+.suggestion_wrap .contents_wrap .stat_wrap {
+  position: absolute;
+  right: 0;
+  background: #f7f8f2; 
+  box-shadow: 0 3px 11px rgb(53 49 72 / 9%);
+  width: 220px;
+  height: 190px;
+  border-radius: 16px;
+  padding: 0 12px 0 26px;
+  display: flex;
+  justify-content: space-between;
+  /* @ align-items: center; 그래야 list도 그래프도 정가운데로 옴 */
+  align-items: center;
+  /* @ 그래프 감추게 박스밖으로 흘러넘치는거 가려주기  */
+  overflow: hidden;
+  z-index: 1;
+}
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding-left: 14px;
+  font-weight: 450;
+  text-align: left;
+  position: relative;
+}
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap li.item_01::before {
+  background: #9178f5;
+}
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap li.item_02::before {
+  background: #b5d269;
+} 
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap li.item_03::before {
+  background: #ff96a5;
+} 
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap li.item_04::before {
+  background: #7476f2;
+} 
+.suggestion_wrap .contents_wrap .stat_wrap .list_wrap li.item_05::before {
+  background: #cfd62e;
+} 
+.suggestion_wrap .contents_wrap .stat_wrap .graph_wrap {
+  /* @ relative 가 왜 들어가면 ... 안되는지?  */
+  /* position: relative; */
+}
+.suggestion_wrap .contents_wrap .stat_wrap .graph_wrap .graph {
+  /* width: 129px; */
+  max-width: 140px;
+  /* height: 130px; */
+  position: absolute;
+  /* left: 50%; */
+  right: -50%;
+  top: 50%;
+  transform: translate(-38%,-50%);
+}
+.suggestion_wrap .contents_wrap .stat_wrap .graph_wrap .caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.suggestion_wrap .contents_wrap .image_wrap {
+  position: relative;
+  /* @  ????? */
+  padding-bottom: 54%;
+}
+.suggestion_wrap .contents_wrap .image_wrap .image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.suggestion_wrap .tit {
+  font-size: 50px;
+  font-family: 'Zilla Slab', serif;
+  margin: 58px auto 44px auto;
+  max-width: 60%;
+}
+.suggestion_wrap  .desc {
+font-size: 20px;
+line-height: 155%;
+max-width: 45%;
+margin: 0 auto;
+}
+.suggestion_wrap .link_wrap {
+  margin: 44px auto 0 auto;
+}
+@keyframes rocket {
+  0% {transform: translate(0);}
+  50% {transform: translateY(-50px);}
+  100% {transform: translate(0);}
+}
+.rocket {
+  animation: rocket 3s linear infinite both;
+}
+
+/* question_wrap css */
+main .question_wrap {
+  padding-bottom: 0;
+}
+main .question_wrap .inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.question_wrap .bg {
+  position: absolute;
+  right: 100px;
+  left: 100px;
+  bottom: auto;
+  height: 455px;
+  background: #e7e7fd;
+  border-radius: 400px;
+  z-index: -1;
+}
+.question_wrap .contents_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 100%;
+}
+.question_wrap .contents_wrap .text_wrap {
+  padding-left: 106px;
+  text-align: left;
+}
+.question_wrap .contents_wrap .text_wrap h2 {
+  font-size: 35px;
+  font-family: 'Zilla Slab', serif;
+  margin: 0 0 25px 0;
+  max-width: 70%;
+}
+.question_wrap .contents_wrap .text_wrap p {
+  font-size: 20px;
+  line-height: 155%;
+} 
+.question_wrap .contents_wrap .cont .cite_wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 38px;
+}
+.question_wrap .contents_wrap .cont .cite_wrap .cite:first-child {
+  /* display: flex */
+  margin-right: 35px;
+}
+.question_wrap .contents_wrap .cont .cite_wrap .cite .icon_wrap {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+.question_wrap .contents_wrap .cont .cite_wrap .tit_wrap {
+  display: inline-block;
+  vertical-align: top;
+}
+.question_wrap .contents_wrap .cont .cite_wrap .tit_wrap .tit {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+.question_wrap .contents_wrap .cont .cite_wrap .tit_wrap .link {
+  font-size: 20px;
+  font-weight: 350;
+  color: #4e50f4;
+  text-decoration: none;
+  /* transition: opacity .2s; */
+}
+.question_wrap .contents_wrap .cont.figure_wrap {
+  flex-shrink: 0;
+  /* position: relative; */
+}
+.question_wrap .contents_wrap .figure_wrap .figure {
+  width: 400px;
+  height: 517px;
+  margin-right: 50px;
+  /* transform: translateY(-50px); */
+  position: relative;
+  padding-bottom: 54%;
+}
+.question_wrap .figure_wrap .figure .question {
+  width: 44px;
+  height: 117px;
+  position: absolute;
+  top: -8%;
+  left: 0;
+}
+.question_wrap .figure_wrap .figure .face {
+  width: 83px;
+  height: 112px;
+  position: absolute;
+  top: -6%;
+  left: 42%;
+}
+.question_wrap .figure_wrap .figure .finger_wrap .finger {
+  width: 79px;
+  height: 42px;
+  position: absolute;
+  top: 25%;
+}
+.question_wrap .figure_wrap .figure .finger_wrap .finger.left {
+  left: 10%;
+  top: 15%;
+}
+.question_wrap .figure_wrap .figure .finger_wrap .finger.right {
+  top: 13%;
+  right: 3%;
+} 
+.question_wrap .figure_wrap .figure .body_top {
+  width: 300px;
+  height: 153px;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+.question_wrap .figure_wrap .figure .body_bottom {
+  width: 336px;
+  height: 244px;
+  position: absolute;
+  left: 0%;
+  bottom: 9%;
+}
+/* figure_wrap animation  */
+@keyframes figure_question {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.figure .question {
+  animation: figure_question 2s linear infinite both;
+}
+@keyframes finger_left {
+  0% {transform: translate(0);}
+  50% {transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+    -ms-transform:matrix(0.00,1.00,-1.00,0.00,0,0);
+    -webkit-transform:matrix(0.00,1.00,-1.00,0.00,0,0);}
+  100% {transform: translate(0);}
+}
+.finger.left {
+  animation: finger_left 2s linear infinite both;
+}
+@keyframes face {
+  0% {transform: translate(0);}
+  50% {transform:matrix(0.97,0.26,-0.26,0.97,0,0);
+    -ms-transform:matrix(0.97,0.26,-0.26,0.97,0,0);
+    -webkit-transform:matrix(0.97,0.26,-0.26,0.97,0,0);}
+  100% {transform: translate(0);}
+}
+.face {
+  animation: face 3s linear infinite both;
+}
+
+/* footer css  */
+footer .wrap {
+  padding: 120px 0 100px;
+}
+footer .wrap .inner {
+  position: relative;
+  padding: 0 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+footer .top_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .top_wrap .logo_wrap {
+  width: 167px;
+  height: 45px;
+  margin-bottom: 20px;
+  /* @ ?  */
+  /* display: inline-block; */
+}
+footer .top_wrap .logo_wrap svg {
+  width: 100%;
+  height: 100%;
+}
+footer .top_wrap .fnb_wrap {
+  display: flex;
+  /* v  */
+  /* flex-direction: row;
+  justify-content: center; */
+  /* v  */
+  padding: 0;
+  margin: 0 -50px;
+}
+
+footer .top_wrap .fnb_wrap .menu_list {
+  padding: 0 50px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 350;
+}
+footer .top_wrap .fnb_wrap .menu_list .tit {
+  display: block;
+  margin-bottom: 30px;
+}
+footer .top_wrap .fnb_wrap .menu_list li {
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  color: #4e50f4;
+}
+footer .top_wrap .fnb_wrap .menu_list li:hover {
+  opacity: 0.5;
+}
+footer .sns_wrap {
+  position: absolute;
+   /* v  sns_wrap이 아니라 a 한테 줘야했었음 */
+   /* display: flex; */
+  /* justify-content: center;
+  align-content: center; */
+   /* v  */
+   top: 80px;
+   /* @  margin: 0; 이게 꼭 필요한지? */
+   margin: 0;
+}
+footer .sns_wrap .sns {
+  /* display: inline-block; */
+  width: 69px;
+  height: 46px;
+  border-radius: 28px;
+  border: 1px solid #dbdee0;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  /* v  */
+  position: relative;
+  /* inline flex 해야 나란히 옆으로  */
+  display: inline-flex;
+  /* @ ? */
+  /* overflow: hidden; */
+}
+footer .sns_wrap .sns:hover {
+  background: #262333;
+}
+/* main .link_wrap .link:hover {
+  background:#0b1e5b;
+  color:#eff1e5;
+  transition: 0.3s;
+} */
+/* @  */
+/* footer .sns_wrap .sns  .logo {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  vertical-align: middle;
+} */
+footer .sns_wrap .sns .logo::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+} 
+footer .sns_wrap .sns .logo_facebook::after{
+  background-image: url(../images/logo/facebook.svg);
+}
+footer .sns_wrap .sns .logo_instagram::after{
+  background-image: url(../images/logo/instagram.svg);
+}
+footer .sns_wrap .sns .logo_linkedin::after{
+  background-image: url(../images/logo/footer_linkedin.svg);
+}
+
+/* inverse 안했다  */
+/* background: #262333; */
+
+footer .sns_wrap .sns .logo_facebook.on::after {
+  background-image: url(../images/logo/facebook_white.svg);
+}
+footer .sns_wrap .sns .logo_instagram.on::after {
+  background-image: url(../images/logo/instagram_white.svg);
+}
+footer .sns_wrap .sns .logo_linkedin.on::after {
+  background-image: url(../images/logo/footer_linkedin_white.svg);
+}
+/* footer .bottom_wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #4e50f4;
+} */
+footer .bottom_wrap {
+  margin-top: 70px;
+  padding-top: 60px;
+  /* v  */
+  border-top: 2px solid rgba(11,30,91,.12);
+}
+footer .bottom_wrap p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: left;
+  opacity: .5;
+}
+
+/* popUp_download  */
+.popUp_download {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  /* z-index: 200; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* @  */
+  /* pointer-events: auto; */
+  opacity: 0;
+  visibility: hidden;
+}
+.popUp_download.on {
+  opacity: 1;
+  visibility: visible;
+}
+.popUp_download .popUp_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(11,30,91,.5);
+  transition: opacity .4s;
+}
+.popUp_download .popUp_bg.on {
+  opacity: 1;
+  visibility: visible;
+}
+.popUp_download .popUp_box {
+  z-index: 200;
+  width: 606px;
+  border-radius: 80px;
+  background: #fff;
+  position: relative;
+  opacity: 0;
+  transition: opacity .4s;
+}
+.popUp_download .popUp_box.on {
+  opacity: 1;
+  /* @  */
+  /* transform: translateX(0); */
+}
+.popUp_download .popUp_box .btn_close_wrap {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  /* @  */
+  transition: opacity .2s;
+  opacity: 0;
+}
+.popUp_download .popUp_box .btn_close_wrap.on {
+  opacity: 1;
+}
+.popUp_download .popUp_box .btn_close_wrap .btn_close {
+  width: 22px;
+  height: 22px;
+}
+.popUp_download .popUp_box .btn_close_wrap .btn_close img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.popUp_download .popUp_box .popUp_contents_wrap {
+  padding: 70px 120px;
+  width: 100%;
+  text-align: center;
+}
+.popUp_download .popUp_box .popUp_contents_wrap .image_wrap {
+  margin: 0 auto;
+  width: 318px;
+    height: 318px;
+    padding: 40px;
+    border: 3px solid #e0e4eb;
+    border-radius: 40px;
+}
+.popUp_download .popUp_box .popUp_contents_wrap .image_wrap img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.popUp_download .popUp_box .popUp_contents_wrap p {
+  font-family: 'Zilla Slab', serif;
+  line-height: 130%;
+  font-weight: 300;
+  margin: 40px 0 0 0;
+  font-size: 24px;
+}
+
+
+
+
+
+
+/* footer */
+
+
+/* 1025 focus */
+@media screen and (max-width: 1280px) {}
